@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Игра-квест</title>
+  </head>
+  <body>
+    <!-- Див с квестом -->
+    <div class="bg-img">
+      <!-- див для очков -->
+      <div class="point">
+        <h2>Найди:</h2>
+        <h4 class="apple_text">1. Яблоко</h4>
+        <h4 class="mushroom_text">2. Гриб</h4>
+        <h4 class="butterfly_text">3. Бабочку</h4>
+        <h4 class="leaf_text">4. Листочек</h4>
+        <h1>Очки:</h1>
+        <h1 class="score">0</h1>
+      </div>
+      <!-- что нужно найти -->
+      <img class="apple" src="apple.png" style="width: 100px" />
+      <img class="mushroom" src="apple.png" style="width: 100px" />
+      <img class="butterfly" src="butterfly.png" style="width: 100px" />
+      <img class="leaf" src="leaf.png" style="width: 100px" />
+    </div>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+      /*создание спрайтов*/
+
+      find("apple").click("hide", "apple_text", 3);
+
+      find("mushroom").click("hide", "mushroom_text", 2);
+
+      find("leaf").click("hide", "leaf_text", -2);
+
+      find("butterfly").doubleClick();
+
+      //зачем менять элементы через скрипт если можно просто в верстке менять
+      //элемент который меняет место положения при клике, нужен типа даблклик чтобы убить этот обьект
+
+      //усложнение кода - это новая механика (возможно, обязательная по заданию)
+
+      //можно ли сделать внутри клика? отдельную функциб для очков котрая находит элемент по классу и выводит туда сообщение любое сообщение
+
+      // find("apple").click("hide", "apple_text");
+      // find("mushroom").click("hide", "mushroom_text");
+
+      //
+
+      /*события jquery*/
+      //двойной клик toggle class
+      //mouseenter  mouseleave hver эффект
+      //focus наводишь мышью задаешь параметры
+      //keyup для изменения (поле ввода) в режиме игры каких то данных (например имя игрока)
+      //addclass присвоение класса
+
+      /*анимация jquery*/
+      //show hide можно временные рамки ставить delay
+      //animate анимация со свойствами
+      //atrr менять атрибуты (картинку изменить)
+    </script>
+  </body>
+</html>
